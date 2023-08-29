@@ -2,15 +2,30 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 import java.io.ByteArrayOutputStream
 
 plugins {
-    kotlin("multiplatform") version "1.8.20"
-    kotlin("native.cocoapods") version "1.8.20"
+    kotlin("multiplatform") version "1.9.10"
+    kotlin("native.cocoapods") version "1.9.10"
     id("com.android.library")
     id("com.adarshr.test-logger") version "3.1.0"
-    id("convention.publication")
+    `maven-publish`
 }
 
-group = "de.voize"
-version = "0.6.0"
+group = "com.beeftechlabs"
+version = "0.6.1"
+
+val localProperties = com.android.build.gradle.internal.cxx.configure.gradleLocalProperties(rootDir)
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/BeeftechLabs/pytorch-lite-multiplatform")
+            credentials {
+                username = localProperties.getProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = localProperties.getProperty("gpr.key") ?: System.getenv("TOKEN")
+            }
+        }
+    }
+}
 
 repositories {
     google()
@@ -20,11 +35,12 @@ repositories {
 kotlin {
     targetHierarchy.default()
 
-    android {
+    androidTarget {
         publishLibraryVariants("release")
     }
 
-    ios()
+    iosX64()
+    iosArm64()
     iosSimulatorArm64()
 
     cocoapods {
@@ -58,11 +74,6 @@ kotlin {
             dependencies {
                 rootProject
                 implementation("org.pytorch:pytorch_android_lite:1.13.1")
-            }
-        }
-        val androidTest by getting {
-            dependencies {
-                implementation("junit:junit:4.13")
             }
         }
     }
@@ -153,11 +164,10 @@ task("iosSimulatorX64Test") {
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdk = 33
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
-        minSdkVersion(24)
-        targetSdkVersion(30)
+        minSdk = 24
     }
     buildTypes {
         getByName("release") {

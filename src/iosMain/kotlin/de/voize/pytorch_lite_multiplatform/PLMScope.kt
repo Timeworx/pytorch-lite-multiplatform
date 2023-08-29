@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalForeignApi::class)
+
 package de.voize.pytorch_lite_multiplatform
 
 import kotlinx.cinterop.*
