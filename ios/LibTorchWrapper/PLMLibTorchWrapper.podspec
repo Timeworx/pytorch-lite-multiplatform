@@ -3,7 +3,7 @@
 
 Pod::Spec.new do |spec|
     spec.name                     = 'PLMLibTorchWrapper'
-    spec.version                  = '0.6.0'
+    spec.version                  = '0.6.3'
     spec.homepage                 = 'https://github.com/voize-gmbh/pytorch-lite-multiplatform'
     spec.source                   = { :http=> '' }
     spec.authors                  = { 'Erik Ziegler' => 'erik@voize.de' }
@@ -14,12 +14,5 @@ Pod::Spec.new do |spec|
 
     spec.source_files = "LibTorchWrapper/**/*.{h,m,mm}"
 
-    spec.dependency 'LibTorch-Lite', '1.13.0.1'
     spec.frameworks = 'Accelerate'
-
-    spec.xcconfig = {
-        'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/LibTorch-Lite/install/include/"',
-        'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-    }
-
 end

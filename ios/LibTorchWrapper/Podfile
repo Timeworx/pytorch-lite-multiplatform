@@ -6,6 +6,6 @@ target 'LibTorchWrapper' do
   use_frameworks!
 
   # Pods for LibTorchWrapper
-  pod 'LibTorch-Lite', '1.13.0.1'
+  pod 'LibFatTorch-Lite', :git => 'https://github.com/Timeworx/pytorch-lite-ios.git'
   
 end

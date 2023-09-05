@@ -1,20 +1,21 @@
 PODS:
-  - LibTorch-Lite (1.13.0.1):
-    - LibTorch-Lite/Core (= 1.13.0.1)
-  - LibTorch-Lite/Core (1.13.0.1):
-    - LibTorch-Lite/Torch
-  - LibTorch-Lite/Torch (1.13.0.1)
+  - LibFatTorch-Lite (2.1)
 
 DEPENDENCIES:
-  - LibTorch-Lite (= 1.13.0.1)
+  - LibFatTorch-Lite (from `https://github.com/Timeworx/pytorch-lite-ios.git`)
 
-SPEC REPOS:
-  trunk:
-    - LibTorch-Lite
+EXTERNAL SOURCES:
+  LibFatTorch-Lite:
+    :git: https://github.com/Timeworx/pytorch-lite-ios.git
+
+CHECKOUT OPTIONS:
+  LibFatTorch-Lite:
+    :commit: 5ae543c433b6e01281f46f8d3f01bcecba61cec0
+    :git: https://github.com/Timeworx/pytorch-lite-ios.git
 
 SPEC CHECKSUMS:
-  LibTorch-Lite: dd01cdefa487b3b1d41f1c8a4495f5e41c79fd80
+  LibFatTorch-Lite: c22b2aa6e9ba083e75af64ceb9e7cbb9579d4d5e
 
-PODFILE CHECKSUM: 56e1939633710f5b0fd08b1be9588e070b744861
+PODFILE CHECKSUM: 6227e299623a2e4a4c7f360a673639dd48b49d32
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1

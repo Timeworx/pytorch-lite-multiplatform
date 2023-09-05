@@ -1,4 +1,6 @@
-#import <LibTorch-Lite/LibTorch-Lite.h>
+#include <torch/csrc/jit/mobile/import.h>
+#include <torch/csrc/jit/mobile/module.h>
+#include <torch/script.h>
 #import <Foundation/Foundation.h>
 #import "Tensor.h"
 

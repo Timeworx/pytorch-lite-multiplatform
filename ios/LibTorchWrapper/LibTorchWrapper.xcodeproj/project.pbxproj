@@ -14,8 +14,8 @@
 		3847982B27FDA16900E4E801 /* LibTorchWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3847982A27FDA16900E4E801 /* LibTorchWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3847983527FDA24E00E4E801 /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3847983427FDA24E00E4E801 /* TorchModule.mm */; };
 		3847983627FDA47C00E4E801 /* TorchModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 3847983327FDA23E00E4E801 /* TorchModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3847987427FDAB4700E4E801 /* Pods_LibTorchWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B89995C3343293DA6F21CC1 /* Pods_LibTorchWrapper.framework */; };
-		3847987527FDAB4700E4E801 /* Pods_LibTorchWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B89995C3343293DA6F21CC1 /* Pods_LibTorchWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3847987527FDAB4700E4E801 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB31A7A3722E7BEC08C077ED /* Pods_LibTorchWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E13240FCF09C7D2EC8A9E3 /* Pods_LibTorchWrapper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3847987527FDAB4700E4E801 /* Pods_LibTorchWrapper.framework in Embed Frameworks */,
+				3847987527FDAB4700E4E801 /* BuildFile in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,7 +33,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		301210CF02902776B50A305E /* Pods-LibTorchWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibTorchWrapper.release.xcconfig"; path = "Target Support Files/Pods-LibTorchWrapper/Pods-LibTorchWrapper.release.xcconfig"; sourceTree = "<group>"; };
 		383109D52809C92300E094E4 /* Tensor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Tensor.mm; sourceTree = "<group>"; };
 		383109D72809C9CF00E094E4 /* Tensor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tensor.h; sourceTree = "<group>"; };
 		3833ABF2286DDCDA00B19C8A /* IValueWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IValueWrapper.mm; sourceTree = "<group>"; };
@@ -42,8 +41,9 @@
 		3847982A27FDA16900E4E801 /* LibTorchWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibTorchWrapper.h; sourceTree = "<group>"; };
 		3847983327FDA23E00E4E801 /* TorchModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
 		3847983427FDA24E00E4E801 /* TorchModule.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
-		6B89995C3343293DA6F21CC1 /* Pods_LibTorchWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibTorchWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		832BCE924628D1EF951626DC /* Pods-LibTorchWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibTorchWrapper.debug.xcconfig"; path = "Target Support Files/Pods-LibTorchWrapper/Pods-LibTorchWrapper.debug.xcconfig"; sourceTree = "<group>"; };
+		52E13240FCF09C7D2EC8A9E3 /* Pods_LibTorchWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibTorchWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B63217CF64D3E9A2B366228 /* Pods-LibTorchWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibTorchWrapper.release.xcconfig"; path = "Target Support Files/Pods-LibTorchWrapper/Pods-LibTorchWrapper.release.xcconfig"; sourceTree = "<group>"; };
+		EABF0C25F4675836595426EB /* Pods-LibTorchWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibTorchWrapper.debug.xcconfig"; path = "Target Support Files/Pods-LibTorchWrapper/Pods-LibTorchWrapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,29 +51,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3847987427FDAB4700E4E801 /* Pods_LibTorchWrapper.framework in Frameworks */,
+				EB31A7A3722E7BEC08C077ED /* Pods_LibTorchWrapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25E7A9DC98D7398E5C3BE4D4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				832BCE924628D1EF951626DC /* Pods-LibTorchWrapper.debug.xcconfig */,
-				301210CF02902776B50A305E /* Pods-LibTorchWrapper.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		3847981D27FDA16800E4E801 = {
 			isa = PBXGroup;
 			children = (
 				3847982927FDA16900E4E801 /* LibTorchWrapper */,
 				3847982827FDA16900E4E801 /* Products */,
-				25E7A9DC98D7398E5C3BE4D4 /* Pods */,
-				9A83B6AD54616E14F630D79D /* Frameworks */,
+				57885825379FBB453CA65689 /* Pods */,
+				8D68D0386008DB9E07248254 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +90,20 @@
 			path = LibTorchWrapper;
 			sourceTree = "<group>";
 		};
-		9A83B6AD54616E14F630D79D /* Frameworks */ = {
+		57885825379FBB453CA65689 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6B89995C3343293DA6F21CC1 /* Pods_LibTorchWrapper.framework */,
+				EABF0C25F4675836595426EB /* Pods-LibTorchWrapper.debug.xcconfig */,
+				5B63217CF64D3E9A2B366228 /* Pods-LibTorchWrapper.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8D68D0386008DB9E07248254 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52E13240FCF09C7D2EC8A9E3 /* Pods_LibTorchWrapper.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,7 +129,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3847982E27FDA16900E4E801 /* Build configuration list for PBXNativeTarget "LibTorchWrapper" */;
 			buildPhases = (
-				D99EFF624BB4F8682BE90BFC /* [CP] Check Pods Manifest.lock */,
+				45F9EEC5722CA7EC39BBEE5B /* [CP] Check Pods Manifest.lock */,
 				3847982227FDA16900E4E801 /* Headers */,
 				3847982327FDA16900E4E801 /* Sources */,
 				3847982427FDA16900E4E801 /* Frameworks */,
@@ -187,7 +188,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D99EFF624BB4F8682BE90BFC /* [CP] Check Pods Manifest.lock */ = {
+		45F9EEC5722CA7EC39BBEE5B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -347,7 +348,7 @@
 		};
 		3847982F27FDA16900E4E801 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 832BCE924628D1EF951626DC /* Pods-LibTorchWrapper.debug.xcconfig */;
+			baseConfigurationReference = EABF0C25F4675836595426EB /* Pods-LibTorchWrapper.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -360,7 +361,9 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
@@ -370,6 +373,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.voize.LibTorchWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -382,7 +386,7 @@
 		};
 		3847983027FDA16900E4E801 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 301210CF02902776B50A305E /* Pods-LibTorchWrapper.release.xcconfig */;
+			baseConfigurationReference = 5B63217CF64D3E9A2B366228 /* Pods-LibTorchWrapper.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -395,7 +399,9 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
@@ -405,6 +411,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.voize.LibTorchWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

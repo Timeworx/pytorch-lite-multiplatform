@@ -9,8 +9,8 @@ plugins {
     `maven-publish`
 }
 
-group = "com.beeftechlabs"
-version = "0.6.1"
+group = "io.timeworx"
+version = "0.6.3"
 
 val localProperties = com.android.build.gradle.internal.cxx.configure.gradleLocalProperties(rootDir)
 
@@ -18,7 +18,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/BeeftechLabs/pytorch-lite-multiplatform")
+            url = uri("https://maven.pkg.github.com/Timeworx/pytorch-lite-multiplatform")
             credentials {
                 username = localProperties.getProperty("gpr.user") ?: System.getenv("USERNAME")
                 password = localProperties.getProperty("gpr.key") ?: System.getenv("TOKEN")
@@ -54,7 +54,7 @@ kotlin {
         }
 
         pod("PLMLibTorchWrapper") {
-            version = "0.6.0"
+            version = "0.6.3"
             headers = "LibTorchWrapper.h"
             source = path(project.file("ios/LibTorchWrapper"))
         }
